@@ -32,3 +32,14 @@ export const createPetListing = async (req, res) => {
     res.status(400).send(err);
   }
 };
+
+//Get specific pet
+export const getPet = async (req, res) => {
+    const { id } = req.params;
+  try {
+    const pet = await petModel.find({ id });
+    res.status(201).send(pet);
+  } catch (err) {
+    res.status(404).send(err);
+  }
+}
