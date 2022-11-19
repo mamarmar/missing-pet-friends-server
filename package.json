@@ -5,7 +5,7 @@
   "description": "Missing pet friends server",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Margarita Marmaridou",
   "license": "ISC",
