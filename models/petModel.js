@@ -6,9 +6,18 @@ const petSchema = new mongoose.Schema({
     //     data: Buffer,
     //     contentType: String
     // },
-    petName: { type: String },
-    date: { type: Date },
-    city: { type: String },
+    petName: { 
+        type: String,
+        required: [true, 'Pet name is required']
+    },
+    date: { 
+        type: Date,
+        required: [true, 'Date is required']
+     },
+    city: { 
+        type: String,
+        required: [true, 'City is required']
+    },
     email: {
         type: String,
         required: [true, 'Email is required'],
