@@ -20,6 +20,9 @@ const petSchema = new mongoose.Schema({
         lowercase: true,
         validate: [ validator.isEmail,{ message: "Valid email is required"}]
     },
+    description: {
+        type: String
+    }
     // petImage: { 
     //     data: Buffer,
     //     contentType: String
