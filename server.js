@@ -13,8 +13,13 @@ const uri = process.env.MONGODB_URI;
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'build')));
 //Route modules
 app.use("/lostpets", petRoutes);
+
+app.get('/*', function(req,res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 //Connection to Database
 mongoose
